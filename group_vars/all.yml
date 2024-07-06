@@ -35,17 +35,9 @@ desktop: hyprland
 # true or false
 install_microcode: true
 
-# whether to enable printing/scanning or not
-# true or false
-enable_printing: true
-
-# whether to detect the scanner or not
-# true or false
-detect_scanner: true
-
 # whether to enable bluetooth or not
 # true or false
-enable_bluetooth: false
+enable_bluetooth: true
 
 # whether to install laptop tools
 # true or false

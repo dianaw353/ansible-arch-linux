@@ -1,0 +1,38 @@
+---
+- name : Install Compatibility Support
+  block:
+    - name: AppImage Support
+      community.general.pacman:
+        name:
+          - fuse2
+        state: present
+      become: true
+    - name: QT Framework wayland Support
+      community.general.pacman:
+        name:
+          - qt5-wayland
+          - qt6-wayland
+        state: present
+      become: true
+    - name: GTK Framework
+      community.general.pacman:
+        name:
+          - gtk4
+          - gtk3
+        state: present
+      become: true
+    - name: Pipewire (audio) Support
+      community.general.pacman:
+        name:  
+          - pipewire
+          - pipewire-audio
+          - pipewire-pulse
+        state: present
+      become: true
+    - name: Useful utilities
+      community.general.pacman:
+        name:
+          - brightnessctl
+          - playerctl
+        state: present
+      become: true

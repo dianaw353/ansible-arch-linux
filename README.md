@@ -1,6 +1,6 @@
 # ansible-arch-linux
 
-[![Lint](https://github.com/loganmarchione/ansible-arch-linux/actions/workflows/lint.yml/badge.svg)](https://github.com/loganmarchione/ansible-arch-linux/actions/workflows/lint.yml)
+# Note rewrite Readme
 
 Ansible playbook to setup my Arch Linux machines (i.e., meant to be run against localhost)
 
@@ -13,7 +13,7 @@ Ansible playbook to setup my Arch Linux machines (i.e., meant to be run against 
 
 1. Install the necessary packages
    ```
-   sudo pacman -S ansible git python
+   sudo pacman -S ansible git python python-pip python-watchdog
    ```
 1. Clone this repo
    ```

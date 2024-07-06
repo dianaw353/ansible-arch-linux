@@ -3,23 +3,23 @@
 # User configuration
 #
 user:
-  name: logan
-  full_name: "Logan Marchione"
-  primary_group: users
-  additional_groups: docker,wheel,render
+  name: diana
+  #full_name: "Logan Marchione"
+  #primary_group: users
+  #additional_groups: docker,wheel,render
   # /bin/bash or /bin/zsh
   shell: /bin/zsh
   # See country list by running `reflector --list-countries`
   country: "United States"
 
 git:
-  name: "{{ user['full_name'] }}"
+  #name: "{{ user['full_name'] }}"
   # obfuscated a little so bots won't find it
-  email_b64: "bG9nYW5AbG9nYW5tYXJjaGlvbmUuY29t"
+  #email_b64: "bG9nYW5AbG9nYW5tYXJjaGlvbmUuY29t"
   # can be "cache", "store", "osxkeychain", or "manager"
-  helper: "cache"
+  #helper: "cache"
   # can be "true" or "false"
-  rebase: "true"
+  #rebase: "true"
   # see this https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---color-movedltmodegt
   colorMoved: "zebra"
 
@@ -53,7 +53,7 @@ laptop: false
 
 # how many parallel downloads to run at once
 pacman:
-  parallel_downloads: 10
+  parallel_downloads: 7
 
 # set aur helper
 # supported helpers are here https://github.com/kewlfft/ansible-aur#kewlfftauraur-module

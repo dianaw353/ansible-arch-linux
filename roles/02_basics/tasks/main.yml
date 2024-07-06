@@ -16,12 +16,12 @@
     state: present
   become: true
 
-- name: Start systemd service - paccache.timer
-  ansible.builtin.systemd:
-    name: paccache.timer
-    state: started
-    enabled: yes
-  become: true
+#- name: Start systemd service - paccache.timer
+#  ansible.builtin.systemd:
+#    name: paccache.timer
+#    state: started
+#    enabled: yes
+#  become: true
 
 - name: Start systemd service - xdg-user-dirs-update.service
   ansible.builtin.systemd:
@@ -60,12 +60,12 @@
     mode: 0644
   become: true
 
-- name: Start systemd service - systemd-boot-update.service
-  ansible.builtin.systemd:
-    name: systemd-boot-update.service
-    state: started
-    enabled: yes
-  become: true
+#- name: Start systemd service - systemd-boot-update.service
+#  ansible.builtin.systemd:
+#    name: systemd-boot-update.service
+#    state: started
+#    enabled: yes
+#  become: true
 
 - name: Upgrade system
   community.general.pacman:

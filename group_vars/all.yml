@@ -56,11 +56,9 @@ aur_helper: yay
 #
 packages:
   - firefox
-  - fastfetch
 
 aur_packages:
   - oh-my-posh-bin
-  - mission-center
 
 base_fonts:
   - noto-fonts

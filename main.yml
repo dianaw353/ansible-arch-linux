@@ -9,5 +9,5 @@
     - { role: 05_desktop }
     - { role: 06_packages }
     - { role: 07_microcode, when: install_microcode }
-    #- { role: 07_users }
+    - { role: 08_users }
     #- { role: 10_laptop, when: laptop }

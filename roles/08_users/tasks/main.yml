@@ -16,3 +16,12 @@
     state: present
     use: "{{ aur_helper }}"
   become: true
+
+- name: Change Shell
+  ansible.builtin.user:
+    name: "{{ user.name }}"
+    groups: "{{ user.additional_groups }}"
+    append: yes
+    shell: "{{ user.shell }}"
+    state: present
+  become: true

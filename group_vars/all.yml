@@ -4,22 +4,13 @@
 #
 user:
   name: diana
-  #full_name: "Logan Marchione"
-  #primary_group: users
-  #additional_groups: docker,wheel,render
+  additional_groups: wheel
   # /bin/bash or /bin/zsh
   shell: /bin/zsh
   # See country list by running `reflector --list-countries`
   country: "United States"
 
 git:
-  #name: "{{ user['full_name'] }}"
-  # obfuscated a little so bots won't find it
-  #email_b64: "bG9nYW5AbG9nYW5tYXJjaGlvbmUuY29t"
-  # can be "cache", "store", "osxkeychain", or "manager"
-  #helper: "cache"
-  # can be "true" or "false"
-  #rebase: "true"
   # see this https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---color-movedltmodegt
   colorMoved: "zebra"
 

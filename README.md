@@ -1,6 +1,7 @@
-# ansible-arch-linux
+# Ansible Arch Linux Post-Install Script
 
-# Note rewrite Readme
+This is a post istall script currently for arch linux only. It is meant to be run after you run 'archinstall' script
+
 
 Ansible playbook to setup my Arch Linux machines (i.e., meant to be run against localhost)
 
@@ -35,4 +36,6 @@ Ansible playbook to setup my Arch Linux machines (i.e., meant to be run against 
    ```
 
 ## TODO
+- [] Rewrite README
+- [] Refactor Code
 - [X] Add reflector pacman hook

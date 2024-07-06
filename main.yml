@@ -7,8 +7,8 @@
     - { role: 03_x }
     - { role: 04_base }
     - { role: 05_desktop }
-    #- { role: 05_packages }
-    - { role: 06_microcode, when: install_microcode }
+    - { role: 06_packages }
+    - { role: 07_microcode, when: install_microcode }
     #- { role: 07_users }
     #- { role: 08_printing_scanning, when: enable_printing }
     #- { role: 09_bluetooth, when: enable_bluetooth }

@@ -10,13 +10,3 @@
 
 - name: Install aur packages
   ansible.builtin.import_tasks: aur.yml
-
-- name: Install flatpaks
-  ansible.builtin.import_tasks: flatpak.yml
-
-- name: Start systemd service - systemd-modules-load.service
-  ansible.builtin.systemd:
-    name: systemd-modules-load.service
-    state: started
-    enabled: yes
-  become: true

@@ -19,6 +19,7 @@
         name:
           - gtk4
           - gtk3
+          - libadwaita
         state: present
       become: true
     - name: Pipewire (audio) Support

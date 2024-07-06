@@ -4,6 +4,7 @@
 #
 user:
   name: diana
+  primary_group: users
   additional_groups: wheel
   # /bin/bash or /bin/zsh
   shell: /bin/zsh

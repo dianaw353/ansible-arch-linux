@@ -8,20 +8,51 @@
       - fastfetch
     state: present
   become: true
+  when: user.shell == '/bin/zsh'
 
-- name: Zsh AUR Dependencies  
+- name: Zsh AUR Dependencies
   kewlfft.aur.aur:
     name:
       - oh-my-posh-bin
     state: present
     use: "{{ aur_helper }}"
   become: true
+  when: user.shell == '/bin/zsh'
 
 - name: Change Shell
   ansible.builtin.user:
     name: "{{ user.name }}"
+    group: users
     groups: "{{ user.additional_groups }}"
     append: yes
     shell: "{{ user.shell }}"
     state: present
   become: true
+
+- name: Create configuration directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ user.name }}"
+    group: "{{ user.primary_group }}"
+    mode: '0755'
+  with_items:
+    - '/home/{{ user.name }}/.config/fastfetch'
+    - '/home/{{ user.name }}/.config/oh-my-posh'
+  become: true
+  when: user.shell == '/bin/zsh'
+
+- name: Get Zsh Conf
+  ansible.builtin.copy:
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+    mode: '0644'
+    owner: "{{ user.name }}"
+    group: "{{ user.primary_group }}"
+  with_items:
+    - { src: 'roles/08_users/templates/fastfetch', dest: '/home/{{ user.name }}/.config/fastfetch/' }
+    - { src: 'roles/08_users/templates/oh-my-posh', dest: '/home/{{ user.name }}/.config/oh-my-posh/' }
+    - { src: 'roles/08_users/templates/.zshrc', dest: '/home/{{ user.name }}/.zshrc' }
+  become: true
+  when: user.shell == '/bin/zsh'
+

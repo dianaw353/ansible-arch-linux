@@ -11,3 +11,8 @@
     - { role: 07_microcode, when: install_microcode }
     - { role: 08_users }
     #- { role: 10_laptop, when: laptop }
+
+  tasks:
+    - name: Display Completion Message
+      ansible.builtin.debug:
+        msg: "The installation has finished. Please restart your system for all effects to take place"

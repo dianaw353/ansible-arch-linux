@@ -6,7 +6,7 @@
     - { role: 02_basics }
     - { role: 03_x }
     - { role: 04_base }
-    #- { role: 04_desktop }
+    - { role: 05_desktop }
     #- { role: 05_packages }
     - { role: 06_microcode, when: install_microcode }
     #- { role: 07_users }

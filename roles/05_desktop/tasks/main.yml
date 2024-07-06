@@ -1,0 +1,16 @@
+---
+- name: Install window manager
+  when: desktop == "hyprland"
+  block:
+    - name: Install Hyprland
+      community.general.pacman:
+        name:
+          - hyprutils
+          - hyprlang
+          - hyprcursor
+          - hyprwayland-scanner
+          - hyprland
+          - xdg-desktop-portal-hyprland
+          - alacritty
+        state: present
+      become: true
